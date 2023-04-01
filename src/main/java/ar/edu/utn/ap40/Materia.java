@@ -49,6 +49,10 @@ public class Materia {
 		
 		return cursar;
 	}
+
+	public Materia(String string, List<Materia> materiasprueba) {
+		// TODO Auto-generated constructor stub
+	}
 	
 	
 

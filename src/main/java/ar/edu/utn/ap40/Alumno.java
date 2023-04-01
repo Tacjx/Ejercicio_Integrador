@@ -21,6 +21,11 @@ public class Alumno {
 		this.materiasAprobadas=new ArrayList<Materia>();
 	}
 	
+	public Alumno(String nombre,String legajo) {
+		this.nombre=nombre;
+		this.legajo=legajo;
+	}
+	
 	public void agregarAprobada(Materia a) {
 		this.materiasAprobadas.add(a);
 		

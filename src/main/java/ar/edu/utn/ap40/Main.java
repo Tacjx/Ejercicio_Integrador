@@ -68,23 +68,27 @@ public class Main {
 		try {
 			for (String linea : Files.readAllLines(Paths.get(archivo))) {
 				
-				String values = linea.split(",");
+				String[] values = linea.split(",");
 				
 
 				String nombre = values[0];
 				String materia = values[1];
-				int indentificador=values[2];
+				String indentificador=values[2];
 				
 				
 				int i=0;
 				Inscripcion ins=new Inscripcion();
 				ins.alumno=alumnos.get(i);
-				ins.materia=materias.get(indentificador);
+				ins.materia=materias.get(Integer.parseInt(indentificador));
 				
 				ins.aprobada();
 				inscripciones.add(ins);
 				
-				
+				if(ins.aprobada()==true) {
+					System.out.println("La Inscripcion fue Aceptada");
+				}else {
+					System.out.println("La Inscripcion NO fue Aceptada");
+				}
 				
 				
 				
